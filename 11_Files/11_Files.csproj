@@ -52,8 +52,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="FileStockRepository.cs" />
     <Compile Include="FileStockRepositoryTests.cs" />
+    <Compile Include="IAsset.cs" />
+    <Compile Include="IFileRepository.cs" />
+    <Compile Include="IStockRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="StockIO.cs" />
     <Compile Include="StockIOTests.cs" />
   </ItemGroup>
   <Choose>

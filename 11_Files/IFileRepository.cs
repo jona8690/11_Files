@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _11_Files
+﻿namespace _11_Files
 {
-    interface IFileRepository : IStockRepository, IFileOperation
+    internal interface IFileRepository
     {
+        string StockFileName(long v);
+        string StockFileName(Stock v);
+        void SaveStock(Stock yhoo);
     }
 }

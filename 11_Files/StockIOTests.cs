@@ -22,7 +22,7 @@ namespace _11_Files
             StockIO io = new StockIO();
             StringWriter sw = new StringWriter();
             io.WriteStock(sw, hp);
-            Assert.AreEqual("HP" + NL + "11,4" + NL + "10" + NL, sw.ToString());
+            Assert.AreEqual("HP" + NL + "11.4" + NL + "10" + NL, sw.ToString());
         }
 
         [TestMethod]
@@ -31,7 +31,7 @@ namespace _11_Files
             StockIO io = new StockIO();
             StringWriter sw = new StringWriter();
             io.WriteStock(sw, yhoo);
-            Assert.AreEqual("YHOO" + NL + "57,2" + NL + "30" + NL, sw.ToString());
+            Assert.AreEqual("YHOO" + NL + "57.2" + NL + "30" + NL, sw.ToString());
         }
 
         [TestMethod]
@@ -39,8 +39,8 @@ namespace _11_Files
         {
             StockIO io = new StockIO();
 
-            String hpData = "HP" + NL + "11,4" + NL + "10" + NL;
-            String yhooData = "YHOO" + NL + "57,2" + NL + "30" + NL;
+            String hpData = "HP" + NL + "11.4" + NL + "10" + NL;
+            String yhooData = "YHOO" + NL + "57.2" + NL + "30" + NL;
 
             StringReader data = new StringReader(hpData);
             Stock loaded = io.ReadStock(data);
