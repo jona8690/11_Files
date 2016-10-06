@@ -36,8 +36,7 @@ namespace _11_Files
 
         internal Stock ReadStock(FileInfo output)
         {
-            StreamReader reader = new StreamReader(output.Name);
-            Stock returnStock = this.ReadStock(reader.ReadToEndAsync().ToString());
+			throw new NotImplementedException();
         }
     }
 }
