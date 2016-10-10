@@ -36,7 +36,13 @@ namespace _11_Files
 
         internal Stock ReadStock(FileInfo output)
         {
-			throw new NotImplementedException();
+            Stock stock = new Stock();
+            StreamReader reader = new StreamReader(output.Name);
+            stock.Symbol = reader.ReadLine();
+            stock.PricePerShare = double.Parse ( reader.ReadLine());
+            stock.NumShares = int.Parse ( reader.ReadLine());
+            reader.Close();
+            return stock;
         }
     }
 }
